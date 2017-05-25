@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+        }
+        html,body{
+            height: 100%;
+            transform-style: preserve-3d;
+        }
+
+        .cude{
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            left:600px;
+            top:200px;
+            transform-style: preserve-3d;
+            transform: rotateX(-45deg) rotateY(-45deg);
+        }
+        .sq{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        .left{
+            transform:translate3d(0,0,25px);
+            background-color: darkred;
+        }
+        .up{
+            transform:translate3d(0,-25px,0) rotate3d(1,0,0,90deg);
+            background: #007aff;
+        }
+        .right{
+            transform:translate3d(25px,0,0) rotate3d(0,1,0,90deg);
+            background-color: chocolate;
+        }
+        .cude1{
+            transform: rotateX(-45deg) rotateY(-45deg);
+            animation-name: cude1;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude1 {
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,0,0);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,0,50px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,-100px,50px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,-100px,50px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,-100px,0);
+            }
+        }
+        .cude2{
+        transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,0,-50px);
+            animation-name: cude2;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude2 {
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,0,-50px);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,0,-50px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,-100px,-50px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,-100px,-50px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,-100px,-50px);
+            }
+
+
+        }
+        .cude3{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,0,-100px);
+            animation-name: cude3;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude3 {
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,0,-100px);
+            }
+            32%{
+                  transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,0,-150px);
+              }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,-100px,-150px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,-100px,-150px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,-100px,-100px);
+            }
+
+
+        }
+        .cude4{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,50px,0);
+            animation-name: cude4;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude4{
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,50px,0);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,50px,50px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,50px,50px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,50px,50px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,50px,0);
+            }
+
+
+        }
+        .cude5{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,100px,0);
+            animation-name: cude5;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude5 {
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,100px,0);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,100px,50px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,200px,50px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,200px,50px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,200px,0);
+            }
+
+        }
+        .cude6{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,50px,-50px);
+            animation-name: cude6;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude6 {
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,50px,-50px);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,50px,-50px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,50px,-50px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,50px,-50px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,50px,-50px);
+            }
+
+
+        }
+
+        .cude7{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,50px,-100px);
+            animation-name: cude7;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude7 {
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,50px,-100px);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,50px,-150px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,50px,-150px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,50px,-150px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,50px,-100px);
+            }
+
+
+        }
+        .cude8{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,100px,-50px);
+            animation-name: cude8;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude8 {
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,100px,-50px);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,100px,-50px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,200px,-50px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,200px,-50px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,200px,-50px);
+            }
+
+
+        }
+        .cude9{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,100px,-100px);
+            animation-name: cude9;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude9 {
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,100px,-100px);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,100px,-150px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(-50px,200px,-150px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,200px,-150px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(0,200px,-100px);
+            }
+        }
+        .cude10{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,0,0);
+            animation-name: cude10;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude10 {
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,0,0);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,0,50px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,-100px,50px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,-100px,50px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,-100px,0);
+            }
+
+        }
+        .cude11{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,0);
+            animation-name: cude11;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude11 {
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,0);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,50px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,50px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,50px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,0);
+            }
+
+        }
+        .cude12{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,100px,0);
+            animation-name: cude12;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude12 {
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,100px,0);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,100px,50px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,200px,50px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,200px,50px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,200px,0);
+            }
+
+
+        }
+        .cude13{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,0,0);
+            animation-name: cude13;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude13 {
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,0,0);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,0,50px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,-100px,50px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,-100px,50px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,-100px,0);
+            }
+
+        }
+
+        .cude14{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,50px,0);
+            animation-name: cude14;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude14 {
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,50px,0);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,50px,50px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,50px,50px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,50px,50px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,50px,0);
+            }
+
+
+        }
+        .cude15{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,100px,0);
+            animation-name: cude15;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude15 {
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,100px,0);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,100px,50px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,200px,50px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,200px,50px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,200px,0);
+            }
+
+
+        }
+        .cude16{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,0,-50px);
+            animation-name: cude16;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude16 {
+            0%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,0,-50px);
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,0,-50px);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,0,-50px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,-100px,-50px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,-100px,-50px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,-100px,-50px);
+            }
+
+        }
+
+        .cude17{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,-50px);
+            animation-name: cude17;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude17 {
+            0%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,-50px);
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,-50px);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,-50px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,-50px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,-50px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,-50px);
+            }
+
+        }
+
+        .cude18{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,100px,-50px);
+            animation-name: cude18;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude18 {
+            0%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,100px,-50px);
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg)translate3d(50px,100px,-50px);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg)translate3d(50px,100px,-50px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg)translate3d(50px,200px,-50px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg)translate3d(50px,200px,-50px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg)translate3d(50px,200px,-50px);
+            }
+
+
+        }
+        .cude19{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,0,-50px);
+            animation-name: cude19;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude19 {
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,0,-50px);
+            }
+            32%{
+                  transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,0,-50px);
+              }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,-100px,-50px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,-100px,-50px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,-100px,-50px);
+            }
+
+
+
+
+        }
+        .cude20{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,50px,-50px);
+            animation-name: cude20;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude20 {
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,50px,-50px);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,50px,-50px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,50px,-50px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,50px,-50px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,50px,-50px);
+            }
+
+        }
+        .cude21{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,100px,-50px);
+            animation-name: cude21;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude21{
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,100px,-50px);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,100px,-50px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,200px,-50px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,200px,-50px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,200px,-50px);
+            }
+
+        }
+        .cude22{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,0,-100px);
+            animation-name: cude22;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude22 {
+            0%{}
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,0,-100px);
+
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,0,-150px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,-100px,-150px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,-100px,-150px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,-100px,-100px);
+            }
+
+        }
+        .cude23{
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,-100px);
+            animation-name: cude23;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude23{
+            0%{}
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,-100px);
+
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,-150px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,-150px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,-150px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,50px,-100px);
+            }
+
+        }
+        .cude24 {
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,100px,-100px);
+            animation-name: cude24;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude24{
+            0%{}
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,100px,-100px);
+
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,100px,-150px);
+            }
+            48%{
+                 transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,200px,-150px);
+             }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,200px,-150px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(50px,200px,-100px);
+            }
+
+        }
+        .cude25 {
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,0,-100px);
+            animation-name: cude25;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude25{
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,0,-100px);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,0,-150px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,-100px,-150px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,-100px,-150px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,-100px,-100px);
+            }
+
+        }
+        .cude26 {
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,50px,-100px);
+            animation-name: cude26;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude26 {
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,50px,-100px);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,50px,-150px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,50px,-150px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,50px,-150px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,50px,-100px);
+            }
+
+        }
+        .cude27 {
+            transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,100px,-100px);
+            animation-name: cude27;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cude27 {
+            0%{
+            }
+            16%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,100px,-100px);
+            }
+            32%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,100px,-150px);
+            }
+            48%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(150px,200px,-150px);
+            }
+            60%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,200px,-150px);
+            }
+            78%{
+                transform: rotateX(-45deg) rotateY(-45deg) translate3d(100px,200px,-100px);
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="cude cude1">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude2">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude3">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude4">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude5">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude6">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude7">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude8">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude9">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude10">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude11">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude12">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude13">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude14">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude15">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude16">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude17">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude18">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude19">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude20">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude21">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude22">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude23">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude24">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude25">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude26">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+    <div class="cude cude27">
+        <div class="sq up"></div>
+        <div class="sq left"></div>
+        <div class="sq right"></div>
+    </div>
+</body>
+</html>
